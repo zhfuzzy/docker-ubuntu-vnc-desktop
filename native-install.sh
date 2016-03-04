@@ -2,7 +2,7 @@
 THIS_USERNAME=<USERNAME>
 # location for the x11vnc deb
 # e.g https://dl.dropboxusercontent.com/u/23905041/ NOTE: keep the last slash(/)
-X11VNC_PKGSRV=<PATH-TO-SERVER>
+X11VNC_PKGSRV=<PATH-TO-SERVER>/
 
 ## uncomment if use other source
 # mv /etc/apt/sources.list /etc/apt/sources.list.backup
