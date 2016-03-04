@@ -1,8 +1,5 @@
 # your username
 THIS_USERNAME=<USERNAME>
-# location for the x11vnc deb
-# e.g https://dl.dropboxusercontent.com/u/23905041/ NOTE: keep the last slash(/)
-X11VNC_PKGSRV=<PATH-TO-SERVER>/
 
 ## uncomment if use other source
 # mv /etc/apt/sources.list /etc/apt/sources.list.backup
@@ -22,10 +19,14 @@ apt-get update \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 
+# location for the x11vnc deb
+# e.g https://dl.dropboxusercontent.com/u/23905041/ NOTE: keep the last slash(/)
+X11VNC_PKGSRV=<PATH-TO-SERVER>/
 # install correct vnc server
-wget --directory-prefix=/tmp ${X11VNC_PKGSRV}x11vnc_0.9.14-1.1ubuntu1_amd64.deb
-wget --directory-prefix=/tmp ${X11VNC_PKGSRV}x11vnc-data_0.9.14-1.1ubuntu1_all.deb
-dpkg -i /tmp/x11vnc*
+# wget --directory-prefix=/tmp ${X11VNC_PKGSRV}x11vnc_0.9.14-1.1ubuntu1_amd64.deb
+# wget --directory-prefix=/tmp ${X11VNC_PKGSRV}x11vnc-data_0.9.14-1.1ubuntu1_all.deb
+# dpkg -i /tmp/x11vnc*
+dpkg -i x11vnc-deb/x11vnc*
 
 ## webserver
 cp -r web /web/
