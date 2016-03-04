@@ -1,12 +1,26 @@
 docker-ubuntu-vnc-desktop
 =========================
 
+Native install
+=================
+1. Replace <USERNAME> with yours (line 2 of native-install.sh)
+2. run <code>./native-install.sh</code>
+3. reboot and visit IP:6081 in browser
+
+docker install
+=================
+
 [![Docker Pulls](https://img.shields.io/docker/pulls/dorowu/ubuntu-desktop-lxde-vnc.svg)](https://hub.docker.com/r/dorowu/ubuntu-desktop-lxde-vnc/)
 [![Docker Stars](https://img.shields.io/docker/stars/dorowu/ubuntu-desktop-lxde-vnc.svg)](https://hub.docker.com/r/dorowu/ubuntu-desktop-lxde-vnc/)
 
 From Docker Index
 ```
 docker pull dorowu/ubuntu-desktop-lxde-vnc
+```
+
+As a base of your docker image
+```
+FROM dorowu/ubuntu-desktop-lxde-vnc
 ```
 
 Build yourself
@@ -23,6 +37,8 @@ docker run -i -t -p 6080:6080 dorowu/ubuntu-desktop-lxde-vnc
 Browse http://127.0.0.1:6080/vnc.html
 
 <img src="https://raw.github.com/fcwu/docker-ubuntu-vnc-desktop/master/screenshots/lxde.png" width=400/>
+
+
 
 
 Troubleshooting
