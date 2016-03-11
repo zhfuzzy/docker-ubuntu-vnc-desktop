@@ -5,7 +5,8 @@ Native install
 =================
 1. Replace <USERNAME> with yours (line 2 of native-install.sh)
 2. run <code>./native-install.sh</code>
-3. reboot and visit IP:6081 in browser
+3. Set up port forward from GUEST:6081 to HOST:<xxxx>
+4. reboot and visit HOST:<xxxx> in browser
 
 docker install
 =================
